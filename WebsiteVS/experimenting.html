@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Home</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow&family=B612+Mono&display=swap" rel="stylesheet">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel ="stylesheet" type ="text/css" href="design.css" />
+		<link rel="icon" href="LOG.png" type="image/icon type">
+	</head>
+   
+	<body>
+		<div class = "splash" >
+			<h3 class = "logo">
+			<span class = "fadeIn">Wyatt</span>
+			<span class = "fadeIn">McCarthy</span>
+		</h3>	
+		</div>
+		<div id="container">
+			<!-- <div id="header">
+			<h1>First Website</h1>
+			<p>This will serve as a collection of all my college coursework and other individual endeavors.<br /> I will have sections  
+			consisting of significant assignments in various fields (Economics, Computer Science, Miscellaneous) as well as personal projects and interests.</p>
+			</div> -->
+		    	<div class = "navbar">
+						<div class = "left">	
+							<div class = "linkwrap">
+								<a href="experimenting.html"><span>Home</span></a>
+							</div>
+								<div class = "reveal">
+									<a href="about.html">About</a>
+								</div>		
+								<div class="reveal">
+									<a href="https://www.linkedin.com/in/wyatt-mccarthy-134997209/">LinkedIn</a>
+								</div>
+								<div class="reveal">
+									<a href="">Highlights</a>
+								</div>		
+						</div>
+					<div class = "right">
+						<div class = "butt"> 
+							<button class = "w">WYATT</button>
+							<button class="last">MCCARTHY</button>
+						</div>           
+						<!-- <div>Wyatt McCarthy</div> -->
+					</div>	
+
+					<!-- <div class = "HOMEright">
+						<div class = "Hbutt"> 
+							<div>Wyatt McCarthy</div>
+							<div class="reveal">
+								<a href="">About Me</a>
+							</div>
+							<div class="reveal">
+								<a href="">LinkedIn</a>
+							</div>
+							<!-- <button class = "w">WYATT</button>
+							<button class="last">MCCARTHY</button> -->
+						</div>    
+			<!-- <hr /> -->
+			<div id="content">
+				
+				<div>
+				<h2>Economics</h2>
+				<ul> 
+					<li><a href="IO.html">Industrial Organization</a></li>
+					<li><a href="consump.html">Consumption and Pursuit of Happiness</a></li>
+					<li><a href="introe.html">Intro to Econ</a></li>
+					<li><a href="micro.html">Microeconomics</a></li>
+					<li><a href="macro.html">Macroeconomics</a></li>
+				</ul>
+				</div>
+
+				<div>
+				<h2>Computer Science</h2>
+				<ul> 
+					<li><a href="introcs.html">Intro to CS</a></li>
+					<li><a href="datastruc.html">Data Structures</a></li>
+					<li><a href="alg.html">Algorithms</a></li>
+					<li><a href="ai.html">Artificial Intelligence</a></li>
+					<li><a href="https://github.com/wmccrthy">Personal Projects</a></li>
+				</ul>
+				</div>
+
+				<div>
+				<h2>Soccer</h2>
+				<ul>
+					<li><a href="">College</a></li>
+					<li><a href="">Club</a></li>
+				</ul>
+				</div>
+			</div>	
+		</div>
+            
+	</body>
+
+
+	<script> 
+	
+	let splash = document.querySelector('.splash');
+	let animated = document.querySelectorAll('.fadeIn');
+
+
+	window.addEventListener('DOMContentLoaded', (e) => {
+
+		setTimeout(()=>{
+
+			animated.forEach((span, idx)=>{
+				setTimeout(()=> {
+					span.classList.add('active');
+				}, (idx + 1)*250)
+			
+	 		});
+			 setTimeout(()=> {
+				animated.forEach((span, idx)=>{
+
+					setTimeout(()=> {
+						span.classList.remove('active');
+						span.classList.add('fadeOut');
+					}, (idx + 1)*50)
+
+				});
+				// splash.classList.add('fadeOut');
+			 }, 1000)
+
+
+
+			}, 1000)
+	})	
+
+	document.addEventListener('DOMContentLoaded', (e) => {
+		setTimeout(()=> {
+			splash.classList.add('blank');
+			
+		}, 1750)
+	
+	})
+
+	document.addEventListener('mouseover', (e) => {
+		const isDrop = e.target.matches('[data-ddB]')
+		if (!isDrop && e.target.closet('[data-dd]') != null) return
+
+		let curDrop 
+		if (isDrop) {
+			curDrop = e.target.closest('[data-dd]');
+			curDrop.classList.toggle('ddReveal');
+		}
+	})
+
+	
+// 	$(document).ready(function(){
+
+// 		if (sessionStorage.getItem('splash') !== 'true') {
+// 		$('.splash').show();
+// 		sessionStorage.setItem('splash','true');
+// 		}
+// 		else {
+// 			splash.classList.add('blank');
+// 		}
+// 		// else {
+// 		// $('.home-page').fadeIn();
+// 		// }    
+// });
+
+
+
+	
+	
+	
+	
+	
+	</script>
+
+
+
+</html>
+

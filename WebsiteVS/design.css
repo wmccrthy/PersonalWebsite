@@ -1,0 +1,487 @@
+.darkmode {
+	filter: invert(1) hue-rotate(180deg);
+}
+
+.invertBack {
+	filter: invert(1) hue-rotate(180deg);
+}
+
+body {
+	background-color: rgb(165, 146, 146); 
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	margin: 0px;
+	animation: transitionIn 0.75s;
+
+}
+
+@keyframes transitionIn {
+	from{ 
+		opacity: 0;
+		transform: rotateX(-10deg);
+	}
+	to {
+		opacity: 1;
+		transform: rotateX(0);
+	}
+
+}
+.splash { 
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100vh;
+	background: rgb(255, 255, 255);
+	z-index: 1;
+	color: rgb(0, 0, 0);
+	text-align: center;
+	line-height: 90vh;
+	transition: .25s;
+}
+
+.logo {
+position: absolute;
+top: 40%;
+left: 50%;
+transform: translate(-50%, -50%);
+color: rgb(0, 0, 0);
+}
+
+.fadeIn {
+	position: relative;
+	display: inline-block;
+	bottom: -20px;
+	opacity: 0;
+	/* animation: fadeIn .5s ease-in forwards; */
+}
+
+.fadeIn.active {
+	bottom: 0;
+	opacity: 1;
+	transition: ease-in-out 0.25s;
+}
+
+
+.fadeIn.fadeOut {
+	bottom: 150px;
+	opacity: 0;
+	transition: ease-in-out 0.5s;
+}
+
+/* @keyframes fadeIn{
+	to {
+		opacity: 1;
+	}
+} */
+
+
+.splash.blank {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100vh;
+	background: transparent;
+	z-index: -10;
+	color: transparent;
+	text-align: center;
+	line-height: 90vh;
+	transition: all .75s;
+}
+
+#container {
+	margin-left: auto;
+	margin-right: auto;
+	display: grid;
+	grid-template-columns: 1fr;
+}
+
+#header {
+	text-align: center;
+	
+}
+
+.navbar {
+	display: flex;
+	padding: 25px;
+	justify-content: space-between;
+}
+
+.left {
+	display: flex;
+	background-color: transparent;
+	width: 15px;
+	height: 27.5px;
+	border-radius: 10px;
+	transition:  0.75s;
+}
+
+.navbar > .left > div {
+	font-size: 1em;
+	text-transform: uppercase;
+	margin-left: 20px;
+}
+
+.linkwrap {
+ 	height: 20px; 
+	 border-bottom: 1px solid transparent;	
+	transition: border-bottom 0.5s;
+}
+
+.linkwrap a {
+	color:rgb(0, 0, 0);
+	text-decoration: none;
+	transition: color 0.75s;
+	transition: text 0.5s;
+}
+
+/* .linkwrap:hover {
+	border-bottom: 1px solid rgb(255, 255, 255);
+} */
+
+
+.linkwrap a:hover:before {
+	content: "Home";
+	color: rgb(0, 0, 0); 
+	border-bottom: 1px solid rgb(0, 0, 0);
+}
+
+.linkwrap a:hover span {
+	display: none;
+	content: "Home";
+}
+
+/* .dropdownmenu {
+	 color: white; 
+	position: absolute;
+	padding-top: .25rem;
+	 border-radius: .25rem; 
+	background-color: rgb(0, 0, 0);
+	box-shadow: 0 2px 3px 0 black;
+	opacity: 0;
+	transform: translateY(-10px);
+ 	transition: opacity .15s ease-in-out, transform .15s ease-in-out;
+} /*
+
+/* .ddReveal {
+	transform: translateY(0);
+	opacity: 1;
+} */ 
+
+
+/* apply concept of right to left; dispy just home highlighted
+upon hover, expand to display all menu sub uptions */
+
+.right {
+	text-transform: uppercase;
+	font-size: 1.1em;
+
+	/* transition: color .75s; */
+	color: cadetblue;
+}
+
+.HOMEright {
+	position: relative;
+	justify-content: space-between;
+	width: 125px;
+	height: 20px;
+	background-color: rgb(121, 150, 151);
+	border-radius: 10px;
+	text-transform: uppercase;
+	/* transition: color .75s; */
+	color: cadetblue;
+
+	transition: 0.5s;
+}
+.left a {
+	font-weight:bolder;
+}
+.left:hover {
+	/* background-color: rgb(237, 237, 237); */
+	width: 375px;
+}
+
+.left:hover .linkwrap a {
+	color: rgb(0, 0, 0);
+	content: "Home";
+}
+
+ /* .left:hover .linkwrap span {
+	display: none;
+}  */
+
+.HButt {
+	justify-content: space-evenly;
+	transition: 0.5s;
+	
+}
+
+.HOMEright:hover .Hbutt {
+	color: black;
+}
+
+
+
+.reveal { 
+	height: 20px; 
+	border-bottom: 1px solid transparent;	
+	transition:  0.75s;
+}
+.reveal a {
+	color: transparent;
+	transition: 0.75s;
+	border-bottom: 1px solid transparent;
+	text-decoration: none;
+}
+/* .reveal a:hover { 
+	border-bottom: 1px solid black;
+} */
+
+.reveal a:hover {
+ color: rgb(0, 0, 0);
+ border-bottom: 1px solid rgb(0, 0, 0);
+}
+
+.left:hover .reveal a {
+	color: rgb(0, 0, 0);
+}
+
+button { 
+	background-color: transparent;
+	color: rgb(0, 0, 0);
+	border: none;
+	font-size: 15px;
+	margin-right: 0%;
+	margin: 0%;
+	padding: 0px;
+	transition: color .5s;
+	transition: scale .5s;
+}
+
+button:hover{ 
+	color: black;
+	animation: bounce .5s infinite;
+}
+
+
+	@keyframes bounce {
+		25% {
+			transform: scale(.8, 1.3)
+		}
+		50% {
+			transform: scale(1.2, .8)
+		}
+		75% {
+			transform: scale(.7, 1.2)
+		}
+
+		
+	}
+
+ 
+#content {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	margin-left: 50px;
+	position: sticky;
+}
+
+#content a {
+	text-decoration: none;
+	color: black;
+	border-bottom: .5px solid transparent;
+	transition: color 1s;
+	transition: border-bottom 0.25s;
+}
+
+#content a:hover {
+color: black;
+border-bottom: .5px solid black;
+}
+
+.aboutcontent {
+	/* display: flex; */
+	/* height: 1750px;
+	width: 1750px; */
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+}
+.aboutMeP {
+	width: 100%;
+	padding: 20px;
+}
+
+.ContactMe {
+	
+	padding: 20px;
+}
+
+.items {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	justify-content: space-evenly;
+}
+
+/* .profImage {
+	padding: 20px;
+	height: 500px;
+	width: 500px;
+}
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+.socImage {
+	padding: 20px;
+	height: 500px;
+	width: 500px;
+} */
+
+.item {
+	position: relative;
+}
+
+.imgBack {
+	height: 85%;
+	width: 75%;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.imgBack:hover {
+	transition: 0.5s;
+}
+
+.imageText {
+	position: relative;
+	top: 265px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+	text-align: center;
+	padding-left: 100px;
+	padding-right: 100px;
+	font-size: large;
+	font-weight: 600;
+	color: rgb(0, 0, 0);
+	
+	/* text-shadow: -1px 1px 0 #000,
+	1px 1px 0 #000,
+   1px -1px 0 #000,
+  -1px -1px 0 #000; */
+}
+
+.imgBack:hover .imageDesc {
+	color: white;
+}
+
+.imgBack:hover .imageText {
+	font-weight: 600;
+	transition: 0.5s;
+	color: transparent
+}
+
+.item .imageDesc {
+	position: absolute;
+	top: 0;
+	display: grid;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+	text-align: center;
+	padding-left: 25px;
+	padding-right: 25px;
+	color: transparent;
+}
+
+.fadeAway {
+transition: 1s;
+filter: brightness(50%);
+}
+
+/* .fadeAway .imageDesc {
+	transition: 1s;
+	filter: brightness(100%);
+} */
+
+.imgBack:hover .return {
+	transition: .5s;
+	color: white;
+	text-shadow: -1px 1px 0 rgb(0, 0, 0),
+	1px 1px 0 rgb(0, 0, 0),
+   1px -1px 0 rgb(0, 0, 0),
+  -1px -1px 0 rgb(0, 0, 0);;
+	filter: brightness(100%);
+}
+
+.ContactMe a {
+	text-decoration: none;
+	color:rgb(0, 0, 0);
+	border-bottom: .5px solid transparent;
+	transition: color 0.5s;
+	transition: border-bottom 0.25s;
+}
+
+.ContactMe a:hover{
+	color: black;
+	border-bottom: .5px solid black;
+}
+.Secondcontent {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	margin-left: 50px;
+}
+.Secondcontent a {
+	text-decoration: none;
+	color: black;
+	border-bottom: .5px solid transparent;
+	transition: color 1s;
+	transition: border-bottom 0.25s;
+}
+
+.Secondcontent a:hover {
+color: black;
+border-bottom: .5px solid black;
+}
+
+.desc {
+	font-size: .8em;
+}
+
+
+
+
+
+
+/* .Courses {
+	position: relative;
+	text-decoration: none;
+	color:cadetblue;
+	border-bottom: .5px solid transparent;
+	transition: color 0.5s;
+	transition: border-bottom 0.25s;
+
+}
+
+.soc {
+	text-decoration: none;
+	color:cadetblue;
+	border-bottom: .5px solid transparent;
+	transition: color 0.5s;
+	transition: border-bottom 0.25s;
+}
+
+.Courses a:hover {
+	color: black;
+border-bottom: .5px solid black;
+}
+
+.soc a:hover {
+	color: black;
+border-bottom: .5px solid black;
+} */

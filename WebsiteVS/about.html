@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>About</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow&family=B612+Mono&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel ="stylesheet" type ="text/css" href="design.css" />
+        <link rel="icon" href="LOG.png" type="image/icon type">
+	</head>
+
+    <body>
+        
+        <div class = "navbar">
+            <div class = "left">	
+                <div class = "linkwrap">
+                    <a href="experimenting.html"><span>Home</span></a>
+                </div>
+                    <div class = "reveal">
+                        <a href="about.html">About</a>
+                    </div>		
+                    <div class="reveal">
+                        <a href="https://www.linkedin.com/in/wyatt-mccarthy-134997209/">LinkedIn</a>
+                    </div>
+    
+                    <div class="reveal">
+                        <a href="">Highlights</a>
+                    </div>					
+            </div>
+        <div class = "right">
+            <div class = "butt"> 
+                <button class = "w">WYATT</button>
+                <button class="last">MCCARTHY</button>
+            </div>           
+            <!-- <div>Wyatt McCarthy</div> -->
+        </div>	
+
+        <!-- <div class = "HOMEright">
+            <div class = "Hbutt"> 
+                <div>Wyatt McCarthy</div>
+                <div class="reveal">
+                    <a href="">About Me</a>
+                </div>
+                <div class="reveal">
+                    <a href="">LinkedIn</a>
+                </div>
+                <!-- <button class = "w">WYATT</button>
+                <button class="last">MCCARTHY</button> -->
+            </div>
+        <div class = "aboutcontent">
+            <div class = "items">
+                <div class="item">
+                    <div class="imgBack">
+                        <div class="aboutMeP">
+                            <h3>About Me</h3>
+                            <p> I am a prospective Computer Science and Economics major in the class of 2024 at Amherst College. I am interested in software engineering, web development/design, entrepreneurship, economics, sports, and fitness.
+                                I truly enjoy the way programming challenges you to problem solve as well as its unlimited creative potential. To date, I have mainly worked in and been taught through Java though I have some experience with HTML, CSS, and JS. I am also intrigued by the applied problem solving that is involved in financial work. I have been interested in applying industry and market knowledge to evaluate companies and their operations since I began my economics coursework at Amherst and found that passion particularly fueled in one course, Industrial Organization. 
+                            </p>
+                        </div>
+                        <div class="ContactMe">
+                            <h3>Contact Me</h3>
+                            <div> 
+                                wmccarthy24@amherst.edu
+                            </div>
+                            <div> 
+                                917-828-6668
+                            </div>
+                            <a href="RESUME.pdf" >Resume</a>
+                            <a href="https://www.linkedin.com/in/wyatt-mccarthy-134997209/">LinkedIn</a>
+                        </div>
+                    </div>    
+                </div>     
+                <div class = "item">
+                    <div class="imgBack inverted" style="background-image:url(LinkedInProf.png)">
+                        <div class="imageText"> 
+                        In the Classroom
+                        </div>
+                        <div class="imageDesc">
+                            I truly enjoy the way programming challenges you to problem solve as well as its unlimited creative potential. To date, I have mainly worked in and been taught through Java though I have some experience with HTML, CSS, and JS. I am also intrigued by the applied problem solving that is involved in financial work. I have been interested in applying industry and market knowledge to evaluate companies and their operations since I began my economics coursework at Amherst and found that passion particularly fueled in one course, Industrial Organization.
+                        </div>
+
+
+
+
+
+                        <!-- <div id="content">
+                            <div class="courses">
+                        Course List
+                                <ul>
+                                    <li><a href="IO.html">Industrial Organization</a></li>
+                                    <li><a href="">Consumption and Pursuit of Happiness</a></li>
+                                    <li><a href="">Intro to Econ</a></li>
+                                    <li><a href="">Intro to CS</a></li>
+                                    <li><a href="">Data Structures</a></li>
+                                </ul>   
+                            </div>    
+                        </div> -->
+
+
+
+
+                    </div>
+                </div>    
+                <div class = "item">
+                    <div class="imgBack inverted" style="background-image:url(SoccerPic.JPG)">
+                        <div class="imageText"> 
+                            On the Field
+                        </div>
+                        <div class="imageDesc">
+                            I currently play for Met Oval's u18/19 DA team, this will be my 3rd year in the Development Academy; my first year, spent at NYCFC when I was a freshman and my other at Met Oval, last year when I was a junior. My sophomore year I played u19 for a Downtown United Soccer Club.
+                        </div>
+
+
+                        <!-- <div id="content">
+                            <div class="soc">
+                                <ul>
+                                    <li><a href="">College</a></li>
+                                    <li><a href="">Club</a></li>
+                                </ul>
+                            </div>        
+                        </div> -->
+
+
+                    </div>
+                </div> 
+            </div>   
+        </div>     
+
+    </body>
+    <script>
+        const aboutItems = document.querySelectorAll(".item")
+
+        aboutItems.forEach(aboutItem => {
+            aboutItem.addEventListener('mouseover', () => {
+                // console.log(aboutItem.childNodes);
+                aboutItem.childNodes[1].classList.add('fadeAway');
+                console.log(aboutItem.childNodes[1].childNodes);
+            })
+        })
+
+        aboutItems.forEach(aboutItem => {
+            aboutItem.addEventListener('mouseout', () => {
+                aboutItem.childNodes[1].classList.remove('fadeAway');
+            })
+        })
+        aboutItems[1].addEventListener('mouseover', () =>  {
+            aboutItems[1].childNodes[1].childNodes[3].classList.add('return');
+        })
+        aboutItems[1].addEventListener('mouseout', () =>  {
+            aboutItems[1].childNodes[1].childNodes[3].classList.remove('return');
+        })
+        aboutItems[2].addEventListener('mouseover', () =>  {
+            aboutItems[2].childNodes[1].childNodes[3].classList.add('return');
+        })
+        aboutItems[2].addEventListener('mouseout', () =>  {
+            aboutItems[2].childNodes[1].childNodes[3].classList.remove('return');
+        })
+
+    </script>
+</html>
